@@ -1,0 +1,65 @@
+<% include backend/partials/header %>
+
+<body class="form-v5">
+	<div class="page-content">
+		<div class="form-v5-content">
+			<form class="form-detail" action="uploaded" method="post" enctype="multipart/form-data">
+				<h2>Register Account Form</h2>
+				<%= typeof msg !== 'undefined' ? msg : '' %>
+				<div class="form-row">
+					<label for="full-name">Full Name</labelenctype="multipart/form-data">
+					<input type="text" name="full-name" id="full-name" class="input-text" placeholder="Your Name" required>
+					<i class="fas fa-user"></i>
+				</div>
+				<div class="form-row">
+					<label for="your-email">Your Email</label>
+					<input type="text" name="your-email" id="your-email" class="input-text" placeholder="Your Email" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+					<i class="fas fa-envelope"></i>
+				</div>
+				<div class="form-row">
+					<label for="password">Password</label>
+					<input type="password" name="password" id="password" class="input-text" placeholder="Your Password" required>
+					<i class="fas fa-lock"></i>
+				</div>
+				<main class="page">
+	<h3>Upload image.</h3>
+	<!-- input file -->
+	<div class="box">
+		<input type="file" id="file-input" name="Image">
+	</div>
+	<!-- leftbox -->
+	<div class="box-2">
+		<div class="result"></div>
+	</div>
+	<!--rightbox-->
+	<div class="box-2 img-result hide">
+		<!-- result of crop -->
+		<img class="cropped" src="" alt="">
+	</div>
+	<!-- input file -->
+	<div class="box">
+		<div class="options hide">
+			<label> Width</label>
+		index	<input type="number" class="img-w" value="300" min="100" max="1200" />
+		</div>
+		<!-- save btn -->
+		<button class="btn save hide">Save</button>
+		<!-- download btn -->
+	
+	</div>
+</main>
+				<div class="form-row-last">
+					<input type="submit" name="register" class="register" value="Upload Details">
+				</div>
+			</form>
+		</div>
+	</div>
+
+	 <script src='https://cdnjs.cloudflare.com/ajax/libs/cropperjs/0.8.1/cropper.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+</body>
+<%include backend/partials/footer%>
