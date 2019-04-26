@@ -67,7 +67,7 @@ if(err){
           msg: 'Error: No File Selected!'
         });
       } else {
-       res.send('file uploaded Successfully');
+       res.send('Image uploaded Successfully');
         }
       
     }
